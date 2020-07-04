@@ -1,11 +1,11 @@
-RSpec.describe Peatio::CounoX::Client do
+RSpec.describe Peatio::CounosX::Client do
   let(:uri) { "http://user:password@127.0.0.1:19332" }
   let(:uri_without_authority) { "http://127.0.0.1:19332" }
 
   before(:all) { WebMock.disable_net_connect! }
   after(:all) { WebMock.allow_net_connect! }
 
-  subject { Peatio::CounoX::Client.new(uri) }
+  subject { Peatio::CounosX::Client.new(uri) }
 
   context :initialize do
     it { expect{ subject }.not_to raise_error }
@@ -50,7 +50,7 @@ RSpec.describe Peatio::CounoX::Client do
 
       it do
         expect{ subject.json_rpc(:methodnotfound) }.to \
-          raise_error(Peatio::CounoX::Client::ResponseError, "Method not found (-32601)")
+          raise_error(Peatio::CounosX::Client::ResponseError, "Method not found (-32601)")
       end
     end
 
@@ -69,7 +69,7 @@ RSpec.describe Peatio::CounoX::Client do
 
       it do
         expect{ subject.json_rpc(:notfound) }.to \
-          raise_error(Peatio::CounoX::Client::Error)
+          raise_error(Peatio::CounosX::Client::Error)
       end
     end
 
@@ -80,7 +80,7 @@ RSpec.describe Peatio::CounoX::Client do
 
       it do
         expect{ subject.json_rpc(:connectionerror) }.to \
-          raise_error(Peatio::CounoX::Client::ConnectionError)
+          raise_error(Peatio::CounosX::Client::ConnectionError)
       end
     end
   end

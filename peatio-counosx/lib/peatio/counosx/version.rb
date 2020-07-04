@@ -1,5 +1,5 @@
 module Peatio
-  module CounoX
+  module CounosX
     VERSION = "2.6.1".freeze
   end
 end

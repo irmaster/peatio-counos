@@ -1,5 +1,5 @@
 module Peatio
-  module CounoX
+  module CounosX
     class Wallet < Peatio::Wallet::Abstract
 
       DEFAULT_FEATURES = { skip_deposit_collection: false }.freeze
@@ -26,7 +26,7 @@ module Peatio
 
       def create_address!(_options = {})
         { address: client.json_rpc(:getnewaddress) }
-      rescue CounoX::Client::Error => e
+      rescue CounosX::Client::Error => e
         raise Peatio::Wallet::ClientError, e
       end
 
@@ -41,14 +41,14 @@ module Peatio
                                ])
         transaction.hash = txid
         transaction
-      rescue CounoX::Client::Error => e
+      rescue CounosX::Client::Error => e
         raise Peatio::Wallet::ClientError, e
       end
 
       def load_balance!
         client.json_rpc(:getbalance).to_d
 
-      rescue CounoX::Client::Error => e
+      rescue CounosX::Client::Error => e
         raise Peatio::Wallet::ClientError, e
       end
 

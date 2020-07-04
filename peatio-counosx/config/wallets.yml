@@ -1,4 +1,4 @@
-- name:             CounoX Deposit Wallet
+- name:             CounosX Deposit Wallet
   blockchain_key:   ltc-testnet
   currency_id:      ltc
   # Address where deposits will be collected to.
@@ -7,13 +7,13 @@
   nsig:             1          # Number of signatures required for performing withdraw.
   max_balance:      0.0
   status:           active
-  gateway:          counoxd  # Gateway client name.
+  gateway:          counosxd  # Gateway client name.
   settings:
     #
-    # counoxd gateway client settings.
+    # counosxd gateway client settings.
     uri:          http://user:password@127.0.0.1:19332
 
-- name:             CounoX Hot Wallet
+- name:             CounosX Hot Wallet
   blockchain_key:   ltc-testnet
   currency_id:      ltc
   # Address where deposits will be collected to.
@@ -22,13 +22,13 @@
   nsig:             1       # Number of signatures required for performing withdraw.
   max_balance:      5.0
   status:           active
-  gateway:          counoxd   # Gateway client name.
+  gateway:          counosxd   # Gateway client name.
   settings:
     #
-    # Counoxd gateway client settings.
+    # Counosxd gateway client settings.
     uri:          http://user:password@127.0.0.1:19332
 
-- name:             CounoX Warm Wallet
+- name:             CounosX Warm Wallet
   blockchain_key:   ltc-testnet
   currency_id:      ltc
   # Address where deposits will be collected to.
@@ -37,8 +37,8 @@
   nsig:             1       # Number of signatures required for performing withdraw.
   max_balance:      50.0
   status:           active
-  gateway:          counoxd   # Gateway client name.
+  gateway:          counosxd   # Gateway client name.
   settings:
     #
-    # Counoxd gateway client settings.
+    # Counosxd gateway client settings.
     uri:          http://user:password@127.0.0.1:19332

@@ -5,7 +5,7 @@ require 'faraday'
 require 'better-faraday'
 
 module Peatio
-  module CounoX
+  module CounosX
     class Client
       Error = Class.new(StandardError)
       ConnectionError = Class.new(Error)

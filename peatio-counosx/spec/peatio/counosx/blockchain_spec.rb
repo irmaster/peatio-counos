@@ -1,23 +1,23 @@
-RSpec.describe Peatio::CounoX::Blockchain do
+RSpec.describe Peatio::CounosX::Blockchain do
   context :features do
     it 'defaults' do
-      blockchain1 = Peatio::CounoX::Blockchain.new
-      expect(blockchain1.features).to eq Peatio::CounoX::Blockchain::DEFAULT_FEATURES
+      blockchain1 = Peatio::CounosX::Blockchain.new
+      expect(blockchain1.features).to eq Peatio::CounosX::Blockchain::DEFAULT_FEATURES
     end
 
     it 'override defaults' do
-      blockchain2 = Peatio::CounoX::Blockchain.new(cash_addr_format: true)
+      blockchain2 = Peatio::CounosX::Blockchain.new(cash_addr_format: true)
       expect(blockchain2.features[:cash_addr_format]).to be_truthy
     end
 
     it 'custom feautures' do
-      blockchain3 = Peatio::CounoX::Blockchain.new(custom_feature: :custom)
-      expect(blockchain3.features.keys).to contain_exactly(*Peatio::CounoX::Blockchain::SUPPORTED_FEATURES)
+      blockchain3 = Peatio::CounosX::Blockchain.new(custom_feature: :custom)
+      expect(blockchain3.features.keys).to contain_exactly(*Peatio::CounosX::Blockchain::SUPPORTED_FEATURES)
     end
   end
 
   context :configure do
-    let(:blockchain) { Peatio::CounoX::Blockchain.new }
+    let(:blockchain) { Peatio::CounosX::Blockchain.new }
     it 'default settings' do
       expect(blockchain.settings).to eq({})
     end
@@ -52,7 +52,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
     end
 
     let(:blockchain) do
-      Peatio::CounoX::Blockchain.new.tap {|b| b.configure(server: server)}
+      Peatio::CounosX::Blockchain.new.tap {|b| b.configure(server: server)}
     end
 
     before do
@@ -157,7 +157,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
       end
 
       let(:blockchain) do
-        Peatio::CounoX::Blockchain.new.tap { |b| b.configure(currencies: [currency]) }
+        Peatio::CounosX::Blockchain.new.tap { |b| b.configure(currencies: [currency]) }
       end
 
       it 'builds formatted transactions for passed transaction' do
@@ -218,7 +218,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
       end
 
       let(:blockchain) do
-        Peatio::CounoX::Blockchain.new.tap do |b|
+        Peatio::CounosX::Blockchain.new.tap do |b|
           b.configure(currencies: [currency1, currency2])
         end
       end
@@ -236,7 +236,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
       end
 
       let(:blockchain) do
-        Peatio::CounoX::Blockchain.new.tap { |b| b.configure(currencies: [currency]) }
+        Peatio::CounosX::Blockchain.new.tap { |b| b.configure(currencies: [currency]) }
       end
 
       let(:raw_transaction) do
@@ -306,7 +306,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
     end
 
     let(:blockchain) do
-      Peatio::CounoX::Blockchain.new.tap {|b| b.configure(server: server)}
+      Peatio::CounosX::Blockchain.new.tap {|b| b.configure(server: server)}
     end
 
     before do
@@ -332,7 +332,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
     let(:server) { 'http://user:password@127.0.0.1:19332' }
     let(:server_without_authority) { 'http://127.0.0.1:19332' }
     let(:blockchain) do
-      Peatio::CounoX::Blockchain.new.tap { |b| b.configure(server: server, currencies: [currency]) }
+      Peatio::CounosX::Blockchain.new.tap { |b| b.configure(server: server, currencies: [currency]) }
     end
 
     subject { blockchain.fetch_block!(40500) }
@@ -364,7 +364,7 @@ RSpec.describe Peatio::CounoX::Blockchain do
     end
 
     let(:blockchain) do
-      Peatio::CounoX::Blockchain.new.tap {|b| b.configure(server: server)}
+      Peatio::CounosX::Blockchain.new.tap {|b| b.configure(server: server)}
     end
 
     before do

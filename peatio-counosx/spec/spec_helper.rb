@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "peatio/counox"
+require "peatio/counosx"
 require "pry-byebug"
 require "webmock/rspec"
 require "mocha"

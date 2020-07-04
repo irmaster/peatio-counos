@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    peatio-counox (2.6.1)
+    peatio-counosx (2.6.1)
       activesupport (~> 5.2.3)
       better-faraday (~> 1.0.5)
       faraday (~> 0.17)
@@ -142,7 +142,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   mocha (~> 1.8)
-  peatio-counox!
+  peatio-counosx!
   pry-byebug
   rake (~> 13.0)
   rspec (~> 3.0)

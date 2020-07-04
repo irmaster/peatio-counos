@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "peatio/counox/version"
+require "peatio/counosx/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "peatio-counox"
-  spec.version       = Peatio::CounoX::VERSION
+  spec.name          = "peatio-counosx"
+  spec.version       = Peatio::CounosX::VERSION
   spec.authors       = ["Yaroslav S."]
   spec.email         = ["ysavchuk@heliostech.fr"]
 
-  spec.summary       = %q{Gem for extending Peatio plugable system with CounoX implementation.}
-  spec.description   = %q{CounoX Peatio gem which implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract.}
+  spec.summary       = %q{Gem for extending Peatio plugable system with CounosX implementation.}
+  spec.description   = %q{CounosX Peatio gem which implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract.}
   spec.homepage      = "https://openware.com/"
   spec.license       = "MIT"
 
